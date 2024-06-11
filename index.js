@@ -8,7 +8,13 @@ let app = express()
 let PORT = process.env.PORT || 3000;
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+    {
+        origin : ["https://form-auth-client.vercel.app"],
+        methods : ["GET","POST","DELETE"],
+        credentials : true
+    }
+))
 
 mg.connect(process.env.URL)
 .then(() =>
