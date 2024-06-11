@@ -10,7 +10,7 @@ let PORT = process.env.PORT || 3000;
 app.use(express.json())
 app.use(cors(
     {
-        origin : ["https://form-auth-client-nlavfe8lb-kartikraiyani03s-projects.vercel.app/"],
+        origin : ["https://form-auth-client.vercel.app/"],
         methods : ["GET","POST","DELETE"],
         credentials : true
     }
